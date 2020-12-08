@@ -3,15 +3,8 @@ var num = '';
 var total = document.getElementById("total");
 
 function btn() {
-    total.value += '1';
-}
-
-function btn2() {
-    total.value += '2';
-}
-
-function sum() {
-    total.value += '+';
+    console.log(this)
+    total.value += this.value;
 }
 
 function calc() {
@@ -22,14 +15,24 @@ function ac() {
    total.value = '';
 }
 
-document.getElementById("ac").addEventListener("click", ac); 
-
-document.getElementById("sum").addEventListener("click", sum); 
-
-document.getElementById("b1").addEventListener("click", btn); 
-
-document.getElementById("b2").addEventListener("click", btn2); 
+document.getElementById("sum").addEventListener("click", btn); 
+document.getElementById("sub").addEventListener("click", btn); 
+document.getElementById("mult").addEventListener("click", btn); 
+document.getElementById("div").addEventListener("click", btn); 
 
 document.getElementById("calc").addEventListener("click", calc); 
-
+document.getElementById("ac").addEventListener("click", ac); 
 document.getElementById("total").value = num;
+
+document.getElementById("b1").addEventListener("click", btn); 
+document.getElementById("b2").addEventListener("click", btn); 
+document.getElementById("b3").addEventListener("click", btn); 
+document.getElementById("b4").addEventListener("click", btn); 
+document.getElementById("b5").addEventListener("click", btn); 
+document.getElementById("b6").addEventListener("click", btn); 
+document.getElementById("b7").addEventListener("click", btn); 
+document.getElementById("b8").addEventListener("click", btn); 
+document.getElementById("b9").addEventListener("click", btn); 
+document.getElementById("b0").addEventListener("click", btn); 
+
+
