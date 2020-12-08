@@ -1,14 +1,82 @@
 <html>
   <head>
+    <title>
+      Pure Javascript Calculator
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
   </head>
   <body>
-    <input id="total">
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-one-quarter">
+            <h1>
+              Pure Javascript Calculator
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4">
 
-    <button id="b1" value="1"> 1 </button>
-    <button id="b2" value="2"> 2 </button>
-    <button id="calc"> = </button>
-    <button id="sum"> + </button>
-    <button id="ac"> AC </button>
+          <div class="columns is-centered">
+            <div class="column ">
+              <div class="field">
+                <div class="control">
+                  <input id="total" class="input" type="text" placeholder="1 + 1 =">
+                </div>
+              </div>
+            </div>
+            </div>
+
+          <div class="columns is-centered ">
+            <div class="column is-centered is-6">
+              <button  class="button" id="b7" value="7">7</button>
+              <button  class="button" id="b8" value="8">8</button>
+              <button  class="button" id="b9" value="9">9</button>
+            </div>
+          </div>
+
+
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <button  class="button" id="b4" value="4">4</button>
+              <button  class="button" id="b5" value="5">5</button>
+              <button  class="button" id="b6" value="6">6</button>
+            </div>
+          </div>
+
+          <div class="columns  is-centered">
+            <div class="column  is-6">
+              <button class="button" id="b1" value="1"> 1 </button>
+              <button  class="button" id="b2" value="2"> 2 </button>
+              <button  class="button" id="b3" value="3"> 3 </button>
+            </div>
+          </div>
+
+          <div class="columns  is-centered ">
+            <div class="column   is-6">
+              <button class="button" id="b0" value="0">0</button>
+            </div>
+          </div>
+
+          <div class="columns  is-centered ">
+            <div class="column is-10">
+              <button  class="button" id="ac"> AC </button>
+              <button  class="button" id="calc"> = </button>
+              <button class="button" id="sum" value="+"> + </button>
+              <button  class="button" id="sub" value="-"> - </button>
+              <button  class="button" id="mult" value=*+"> * </button>
+              <button  class="button" id="div" value="/"> / </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="calc.js"></script>
   </body>
 </html>
