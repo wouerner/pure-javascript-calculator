@@ -15,6 +15,25 @@ function ac() {
    total.value = '';
 }
 
+document.onkeyup = function(e) {
+  console.log(e.key) 
+
+  if(!isNaN(parseInt(e.key))) {
+      total.value += e.key;
+  }
+
+    switch(e.key) {
+        case '/':
+        case '*':
+        case '-':
+        case '+':
+        case '=':
+            total.value += e.key;
+            break;
+    }
+
+};
+
 document.getElementById("sum").addEventListener("click", btn); 
 document.getElementById("sub").addEventListener("click", btn); 
 document.getElementById("mult").addEventListener("click", btn); 
@@ -34,5 +53,4 @@ document.getElementById("b7").addEventListener("click", btn);
 document.getElementById("b8").addEventListener("click", btn); 
 document.getElementById("b9").addEventListener("click", btn); 
 document.getElementById("b0").addEventListener("click", btn); 
-
 
