@@ -3,8 +3,8 @@ var num = '';
 var total = document.getElementById("total");
 
 function btn() {
-    console.log(this)
     total.value += this.value;
+    bounce(this.id)
 }
 
 function calc() {
@@ -15,17 +15,46 @@ function ac() {
    total.value = '';
 }
 
+
+function bounce(id){
+    let element = document.getElementById(id);
+    element.classList.add("animate__animated");
+    element.classList.add("animate__bounceIn");
+    element.classList.add("is-light");
+
+    setTimeout(function() {
+        element.classList.remove("animate__bounceIn");
+    }, 200)
+
+    setTimeout(function() {
+        element.classList.remove("is-light");
+    }, 1000)
+
+}
+
 document.onkeyup = function(e) {
   console.log(e.key) 
 
+  if(e.key == 'Backspace'){
+    total.value = total.value.slice(0, -1);
+  }
+
+  if(e.key == 'Delete'){
+    total.value = '';
+  }
+
   if(!isNaN(parseInt(e.key))) {
       total.value += e.key;
+
+      bounce("b" + e.key)
+      return;
   }
 
     switch(e.key) {
         case '/':
         case '*':
         case '-':
+            bounce("sub")
         case '+':
         case '=':
             total.value += e.key;
