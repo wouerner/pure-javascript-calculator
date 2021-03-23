@@ -24,79 +24,80 @@
         <div class="columns is-centered">
           <div class="column is-4 card">
 
-          <div class="columns is-centered">
-            <div class="column ">
-              <div class="field">
-                <div class="control">
-                  <input id="total" class="input is-large" type="text" placeholder="1 + 1 =">
+            <div class="columns is-centered">
+              <div class="column ">
+                <div class="field">
+                  <div class="control">
+                    <input id="total" class="input is-large" type="text" placeholder="1 + 1 =">
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="columns is-centered ">
+              <div class="column is-centered is-3">
+                <button  class="button is-fullwidth" id="b7" value="7">7</button>
+              </div>
+              <div class="column is-centered is-3">
+                <button  class="button is-fullwidth" id="b8" value="8">8</button>
+              </div>
+              <div class="column is-centered is-3">
+                <button  class="button is-fullwidth" id="b9" value="9">9</button>
+              </div>
+
+              <div class="column is-centered is-3">
+                <button class="button  is-info is-fullwidth" id="ac"> AC </button>
+              </div>
             </div>
 
-          <div class="columns is-centered ">
-            <div class="column is-centered is-3">
-              <button  class="button is-fullwidth" id="b7" value="7">7</button>
-            </div>
-            <div class="column is-centered is-3">
-              <button  class="button is-fullwidth" id="b8" value="8">8</button>
-            </div>
-            <div class="column is-centered is-3">
-              <button  class="button is-fullwidth" id="b9" value="9">9</button>
+            <div class="columns is-centered">
+              <div class="column is-3">
+                <button  class="button is-fullwidth" id="b4" value="4">4</button>
+              </div>
+              <div class="column is-centered is-3">
+                <button  class="button is-fullwidth" id="b5" value="5">5</button>
+              </div>
+              <div class="column is-centered is-3">
+                <button  class="button is-fullwidth" id="b6" value="6">6</button>
+              </div>
+              <div class="column is-centered is-3">
+                <button class="button is-info is-fullwidth" id="div" value="/"> / </button>
+              </div>
             </div>
 
-            <div class="column is-centered is-3">
-              <button class="button  is-info is-fullwidth" id="ac"> AC </button>
+            <div class="columns  is-centered">
+              <div class="column is-3">
+                <button class="button is-fullwidth" id="b1" value="1"> 1 </button>
+              </div>
+              <div class="column  is-3">
+                <button  class="button is-fullwidth" id="b2" value="2"> 2 </button>
+              </div>
+              <div class="column  is-3">
+                <button  class="button is-fullwidth" id="b3" value="3"> 3 </button>
+              </div>
+              <div class="column  is-3">
+                <button class="button is-info is-fullwidth" id="sum" value="+"> + </button>
+              </div>
+            </div>
+
+            <div class="columns is-centered ">
+              <div class="column is-3">
+                <button class="button is-fullwidth" id="b0" value="0">0</button>
+              </div>
+              <div class="column is-3">
+                <button class="button  is-info is-fullwidth" id="calc"> = </button>
+              </div>
+              <div class="column is-3">
+                <button class="button  is-info is-fullwidth" id="sub" value="-"> - </button>
+              </div>
+              <div class="column is-3">
+                <button class="button is-info is-fullwidth" id="mult" value="*"> * </button>
+              </div>
             </div>
           </div>
 
-
-          <div class="columns is-centered">
-            <div class="column is-3">
-              <button  class="button is-fullwidth" id="b4" value="4">4</button>
-            </div>
-            <div class="column is-centered is-3">
-              <button  class="button is-fullwidth" id="b5" value="5">5</button>
-            </div>
-            <div class="column is-centered is-3">
-              <button  class="button is-fullwidth" id="b6" value="6">6</button>
-            </div>
-            <div class="column is-centered is-3">
-              <button class="button is-info is-fullwidth" id="div" value="/"> / </button>
-            </div>
+          <div id="historyDIV" class="column is-4 ">
           </div>
-
-          <div class="columns  is-centered">
-            <div class="column is-3">
-              <button class="button is-fullwidth" id="b1" value="1"> 1 </button>
-            </div>
-            <div class="column  is-3">
-              <button  class="button is-fullwidth" id="b2" value="2"> 2 </button>
-            </div>
-            <div class="column  is-3">
-              <button  class="button is-fullwidth" id="b3" value="3"> 3 </button>
-            </div>
-            <div class="column  is-3">
-              <button class="button is-info is-fullwidth" id="sum" value="+"> + </button>
-            </div>
-          </div>
-
-          <div class="columns is-centered ">
-            <div class="column is-3">
-              <button class="button is-fullwidth" id="b0" value="0">0</button>
-            </div>
-            <div class="column is-3">
-              <button class="button  is-info is-fullwidth" id="calc"> = </button>
-            </div>
-            <div class="column is-3">
-              <button class="button  is-info is-fullwidth" id="sub" value="-"> - </button>
-            </div>
-            <div class="column is-3">
-              <button class="button is-info is-fullwidth" id="mult" value="*"> * </button>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
     <script src="calc.js"></script>

@@ -8,7 +8,17 @@ function btn() {
 }
 
 function calc() {
-   total.value = eval(total.value);
+
+    var nodeDiv = document.createElement("div");                 
+    var textnode = document.createTextNode(total.value)
+    nodeDiv.appendChild(textnode);
+    nodeDiv.classList.add("column");
+    nodeDiv.classList.add("card");
+
+    var historyDIV = document.getElementById("historyDIV");
+    document.getElementById("historyDIV").appendChild(nodeDiv);
+
+    total.value = eval(total.value);
 }
 
 function ac() {
