@@ -10,10 +10,36 @@ function btn() {
 function calc() {
 
     var nodeDiv = document.createElement("div");                 
-    var textnode = document.createTextNode(total.value)
-    nodeDiv.appendChild(textnode);
     nodeDiv.classList.add("column");
     nodeDiv.classList.add("card");
+
+
+    var iNode = document.createElement("i");                 
+    iNode.classList.add("fa-window-close");
+    iNode.classList.add("fas");
+
+    var spanNode = document.createElement("span");                 
+    spanNode.classList.add("icon");
+    spanNode.classList.add("is-small");
+    spanNode.classList.add("is-right");
+
+    spanNode.appendChild(iNode);
+
+
+    var buttonNode = document.createElement("button");                 
+    buttonNode.type = 'button';
+    buttonNode.classList.add("button");
+    buttonNode.classList.add("is-pulled-right");
+    buttonNode.innerHTML = '<span class="icon is-small is-right"><i class="fas fa-window-close"><i/></span>';
+    
+
+    var spanTextNode = document.createElement("span");                 
+    var text = document.createTextNode(total.value)
+    spanTextNode.appendChild(text);
+
+    nodeDiv.appendChild(spanTextNode);
+    nodeDiv.appendChild(buttonNode);
+
 
     var historyDIV = document.getElementById("historyDIV");
     document.getElementById("historyDIV").appendChild(nodeDiv);
