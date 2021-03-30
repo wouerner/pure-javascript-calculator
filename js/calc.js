@@ -7,45 +7,6 @@ function btn() {
     bounce(this.id)
 }
 
-function calc() {
-
-    var nodeDiv = document.createElement("div");                 
-    nodeDiv.classList.add("column");
-    nodeDiv.classList.add("card");
-
-
-    var iNode = document.createElement("i");                 
-    iNode.classList.add("fa-window-close");
-    iNode.classList.add("fas");
-
-    var spanNode = document.createElement("span");                 
-    spanNode.classList.add("icon");
-    spanNode.classList.add("is-small");
-    spanNode.classList.add("is-right");
-
-    spanNode.appendChild(iNode);
-
-
-    var buttonNode = document.createElement("button");                 
-    buttonNode.type = 'button';
-    buttonNode.classList.add("button");
-    buttonNode.classList.add("is-pulled-right");
-    buttonNode.innerHTML = '<span class="icon is-small is-right"><i class="fas fa-window-close"><i/></span>';
-    
-
-    var spanTextNode = document.createElement("span");                 
-    var text = document.createTextNode(total.value)
-    spanTextNode.appendChild(text);
-
-    nodeDiv.appendChild(spanTextNode);
-    nodeDiv.appendChild(buttonNode);
-
-
-    var historyDIV = document.getElementById("historyDIV");
-    document.getElementById("historyDIV").appendChild(nodeDiv);
-
-    total.value = eval(total.value);
-}
 
 function ac() {
    total.value = '';
@@ -66,6 +27,52 @@ function bounce(id){
         element.classList.remove("is-light");
     }, 1000)
 
+}
+
+
+class Calc {
+    constructor(){
+        console.log('class calc')
+    }
+
+    ac() {
+        total.value = '';
+    }
+
+    calc() {
+        var nodeDiv = document.createElement("div");                 
+        nodeDiv.classList.add("column");
+        nodeDiv.classList.add("card");
+
+        var iNode = document.createElement("i");                 
+        iNode.classList.add("fa-window-close");
+        iNode.classList.add("fas");
+
+        var spanNode = document.createElement("span");                 
+        spanNode.classList.add("icon");
+        spanNode.classList.add("is-small");
+        spanNode.classList.add("is-right");
+
+        spanNode.appendChild(iNode);
+
+        var buttonNode = document.createElement("button");                 
+        buttonNode.type = 'button';
+        buttonNode.classList.add("button");
+        buttonNode.classList.add("is-pulled-right");
+        buttonNode.innerHTML = '<span class="icon is-small is-right"><i class="fas fa-window-close"><i/></span>';
+
+        var spanTextNode = document.createElement("span");                 
+        var text = document.createTextNode(total.value)
+        spanTextNode.appendChild(text);
+
+        nodeDiv.appendChild(spanTextNode);
+        nodeDiv.appendChild(buttonNode);
+
+        var historyDIV = document.getElementById("historyDIV");
+        document.getElementById("historyDIV").appendChild(nodeDiv);
+
+        total.value = eval(total.value);
+    }
 }
 
 document.onkeyup = function(e) {
@@ -104,8 +111,8 @@ document.getElementById("sub").addEventListener("click", btn);
 document.getElementById("mult").addEventListener("click", btn); 
 document.getElementById("div").addEventListener("click", btn); 
 
-document.getElementById("calc").addEventListener("click", calc); 
-document.getElementById("ac").addEventListener("click", ac); 
+// document.getElementById("calc").addEventListener("click", calc); 
+// document.getElementById("ac").addEventListener("click", ac); 
 document.getElementById("total").value = num;
 
 document.getElementById("b1").addEventListener("click", btn); 
